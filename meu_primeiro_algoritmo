@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
+main ()
+{
+	float n1, n2, n3, media;
+	char n;
+	do {
+	printf ("Este algoritmo calcula a media de 3 notas.\n");
+	printf ("Informe a primeira nota de 1 a 10: ");
+	scanf ("%f", &n1);
+	if (n1 > 10)
+		{	
+		do {
+		printf ("Informe uma nota entre 1 a 10.\nInforme novamente a primeira nota: ");
+		scanf ("%f", &n1);
+		} while (n1 > 10);
+	}
+	printf ("Informe a segunda nota: ");
+	scanf ("%f", &n2);
+	if (n2 > 10)
+		{
+		do {
+		printf ("Informe uma nota entre 1 e 10.\nInforme novamente a segunda nota: ");
+		scanf ("%f", &n2);
+		} while (n2 > 10);
+	}
+	printf ("Informe a terceira nota: ");
+	scanf ("%f", &n3);
+	if (n3 > 10)
+	{
+		do {
+			printf ("Informe uma nota entre 1 e 10. \nInforme novamente a terceira nota: ")/
+			scanf ("%f", &n3);
+		} while (n3 > 10);
+	}
+	media = (n1 + n2 + n3)/3;
+	printf ("\nA media dos 3 valores e:\n");
+	printf ("%.2f", media);
+	getchar();
+	printf ("\nDeseja continuar s/n?\n");
+	scanf ("%c", &n);
+	} while (n == 's');
+	system ("pause");
+}
